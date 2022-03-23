@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import Books from './Books';
 import Categories from './Categories';
+import './Navigator.css';
 
 const Navigator = () => (
   <Router>
