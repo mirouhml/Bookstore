@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Book from './Book';
 import { v4 as uuidv4 } from 'uuid';
 import './Books.css';
+import Form from './Form';
 
 const Books = () => {
   const [books, setBooks] = useState([]);
@@ -30,21 +31,24 @@ const Books = () => {
   }, []);
 
   return (
-    <ul>
-      {
-        books.map((book) => (
-          <Book 
-            key={book.id}
-            title={book.title}
-            author={book.author}
-            category={book.category}
-            progress={book.progress}
-            chapters={book.chapters}
-            currentChapter={book.currentChapter}
-          />
-        ))
-      }
-    </ul>
+    <div className="books-container">
+      <ul>
+        {
+          books.map((book) => (
+            <Book 
+              key={book.id}
+              title={book.title}
+              author={book.author}
+              category={book.category}
+              progress={book.progress}
+              chapters={book.chapters}
+              currentChapter={book.currentChapter}
+            />
+          ))
+        }
+        <li className="form-item"><Form /></li>
+      </ul>
+    </div>
   );
 };
 
