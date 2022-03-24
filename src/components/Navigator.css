@@ -1,12 +1,13 @@
 .header {
   display: flex;
   padding: 0 1rem;
-  background-color: rgb(105 178 144);
+  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
+  gap: 2rem;
+  border: 1px solid #bfb9b9;
 }
 
 .header h1 {
-  flex-grow: 4;
   text-align: left;
 }
 
@@ -17,21 +18,13 @@
   align-items: center;
   margin: 0;
   margin-right: 1rem;
-  flex-grow: 3;
   height: 100%;
+  gap: 2rem;
 }
 
 .header li {
   height: 100%;
   width: 100%;
-}
-
-.header li:hover {
-  background-color: #59a281;
-}
-
-.active-background {
-  background-color: #59a281;
 }
 
 .header a {
