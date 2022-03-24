@@ -4,7 +4,7 @@
 
 >This is a "Bookstore" website, where you can add books to your list and check available categories.
 
-![localhost_3000_math-magicians (2)](https://user-images.githubusercontent.com/20567503/159556805-5e59baaf-171f-4f46-983f-a85bf3abc1ee.png)
+![localhost_3000_](https://user-images.githubusercontent.com/20567503/159832530-535ac5ca-3b1e-4e8a-be68-0776c5219d8a.png)
 
 
 ## Built With
