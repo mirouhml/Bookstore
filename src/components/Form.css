@@ -1,0 +1,16 @@
+form {
+  display: flex;
+  gap: 2rem;
+}
+
+input {
+  flex-grow: 3;
+}
+
+select {
+  flex-grow: 1;
+}
+
+button {
+  flex-grow: 1;
+}
