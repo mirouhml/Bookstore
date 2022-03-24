@@ -1,0 +1,39 @@
+.book {
+  width: 80%;
+  display: flex;
+  margin: 2rem;
+}
+
+.progress-bar {
+  width: 40%;
+  margin: 0 1rem;
+}
+
+.CircularProgressbar-text {
+  display: none;
+}
+
+.book-content-container {
+  flex-grow: 1;
+}
+
+.progress-bar-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.progress-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-text p {
+  margin: 0;
+}
+
+.progress-content {
+  display: flex;
+}
