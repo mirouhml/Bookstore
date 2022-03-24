@@ -1,0 +1,13 @@
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categories button {
+  width: fit-content;
+}
+
+.categories h2 {
+  width: fit-content;
+}
