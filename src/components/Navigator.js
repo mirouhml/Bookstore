@@ -19,7 +19,7 @@ const Navigator = () => (
             <Link to="/" id="home">BOOKS</Link>
           </li>
           <li>
-            <Link to="/categories" id="categories">Categories</Link>
+            <Link to="/categories" id="categories">CATEGORIES</Link>
           </li>
         </ul>
       </div>
