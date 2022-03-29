@@ -11,8 +11,7 @@ const Form = (props) => {
       <form>
         <input type="text" placeholder="Book title" id="book-title" />
         <input type="text" placeholder="Author" id="book-author" />
-        <select id="categories-dropdown" name="categories" defaultValue="Categories">
-          <option value="categories" selected disabled>Categories</option>
+        <select id="categories-dropdown" name="categories">
           <option value="action">Action</option>
           <option value="science fiction">Science Fiction</option>
           <option value="fantasy">Fantasy</option>
