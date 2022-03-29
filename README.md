@@ -10,6 +10,7 @@
 ## Built With
 
 - React
+- Redux
 - CSS
 
 ## Live demo
@@ -43,6 +44,7 @@ $ git clone git@github.com:mirouhml/Bookstore.git.
 - GitHub
 - Git
 - React
+- Redux
 
 
 ## Author
