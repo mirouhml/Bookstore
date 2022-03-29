@@ -1,34 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import { useSelector, useDispatch } from 'react-redux';
+import { addBook, removeBook } from '../redux/books/books';
 import Book from './Book';
 import './Books.css';
 import Form from './Form';
 
 const Books = () => {
   const [books, setBooks] = useState([]);
+  const booksInit = useSelector((state) => state.books);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    setBooks([
-      {
-        id: uuidv4(),
-        title: 'The Hunger Games',
-        author: 'Suzanne Collins',
-        category: 'Action',
-        progress: 10,
-        chapters: 40,
-        currentChapter: 2,
-      },
-      {
-        id: uuidv4(),
-        title: 'Dune',
-        author: 'Frank Herbert',
-        category: 'Science Fiction',
-        progress: 0,
-        chapters: 70,
-        currentChapter: 10,
-      },
-    ]);
-  }, []);
+    setBooks(booksInit);
+  }, [booksInit]);
+
+  const addBookAction = (book) => {
+    dispatch(addBook(book));
+  };
+
+  const removeBookAction = (id) => {
+    dispatch(removeBook(id));
+  };
 
   return (
     <div className="books-container">
@@ -37,16 +29,18 @@ const Books = () => {
           books.map((book) => (
             <Book
               key={book.id}
+              id={book.id}
               title={book.title}
               author={book.author}
               category={book.category}
               progress={book.progress}
               chapters={book.chapters}
               currentChapter={book.currentChapter}
+              removeBook={removeBookAction}
             />
           ))
         }
-        <li className="form-item"><Form /></li>
+        <li className="form-item"><Form addBook={addBookAction} removeBook={removeBookAction} /></li>
       </ul>
     </div>
   );
