@@ -4,7 +4,7 @@ const REMOVE_BOOK = 'REMOVE_BOOK';
 const reducer = (books = [], action) => {
   switch (action.type) {
     case ADD_BOOK:
-      return books.push(action.book);
+      return [...books, action.book];
     case REMOVE_BOOK:
       return books.filter((book) => (book.id !== action.book.id));
     default: return books;
