@@ -1,6 +1,6 @@
 const DISPLAY = 'DISPLAY';
 
-const reducer = (categories = [], action) => {
+const reducer = (categories = 'Check status', action) => {
   switch (action.type) {
     case DISPLAY:
       return action.message;
