@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Math Magicians
+# Bookstore
 
 >This is a "Bookstore" website, where you can add books to your list and check available categories.
 
