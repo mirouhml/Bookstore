@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const Book = (props) => {
   const {
-    title, category, author, progress, currentChapter,
+    id, title, category, author, progress, currentChapter, removeBook,
   } = props;
   return (
     <li className="book">
@@ -18,7 +18,7 @@ const Book = (props) => {
         </div>
         <div>
           <button type="button">Comments</button>
-          <button type="button">Remove</button>
+          <button type="button" onClick={() => { removeBook(id); }}>Remove</button>
           <button type="button">Edit</button>
         </div>
       </div>
@@ -50,11 +50,13 @@ const Book = (props) => {
 };
 
 Book.propTypes = {
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   progress: PropTypes.number.isRequired,
   currentChapter: PropTypes.number.isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
 
 export default Book;
