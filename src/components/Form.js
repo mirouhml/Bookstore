@@ -18,15 +18,21 @@ const Form = (props) => {
         </select>
         <button
           type="button"
-          onClick={() => addBook({
-            id: uuidv4(),
-            title: document.getElementById('book-title').value,
-            author: document.getElementById('book-author').value,
-            category: document.getElementById('categories-dropdown').value,
-            progress: 0,
-            chapters: 40,
-            currentChapter: 1,
-          })}
+          onClick={() => {
+            const title = document.getElementById('book-title');
+            const author = document.getElementById('book-author');
+            addBook({
+              id: uuidv4(),
+              title: title.value,
+              author: author.value,
+              category: document.getElementById('categories-dropdown').value,
+              progress: 0,
+              chapters: 40,
+              currentChapter: 1,
+            });
+            title.value = '';
+            author.value = '';
+          }}
         >
           ADD BOOK
         </button>
