@@ -41,6 +41,7 @@ const Books = () => {
             />
           ))
         }
+        <li className="horizontal-line" />
         <li className="form-item"><Form addBook={addBookAction} removeBook={removeBookAction} /></li>
       </ul>
     </div>
