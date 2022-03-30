@@ -9,17 +9,27 @@ import Books from './Books';
 import Categories from './Categories';
 import './Navigator.css';
 
+const toggleActive = (e) => {
+  e.target.parentNode.parentNode.childNodes.forEach((child) => {
+    if (child.classList.contains('active')) {
+      const child2 = child;
+      child2.className = 'inactive';
+    }
+  });
+  e.target.parentNode.className = 'active';
+};
+
 const Navigator = () => (
   <Router>
     <div className="main">
       <div className="header">
         <h1>Bookstore</h1>
         <ul>
-          <li>
-            <Link to="/" id="home">BOOKS</Link>
+          <li className="active">
+            <Link to="/" id="home" onClick={toggleActive}>BOOKS</Link>
           </li>
-          <li>
-            <Link to="/categories" id="categories">CATEGORIES</Link>
+          <li className="inactive">
+            <Link to="/categories" id="categories" onClick={toggleActive}>CATEGORIES</Link>
           </li>
         </ul>
       </div>
