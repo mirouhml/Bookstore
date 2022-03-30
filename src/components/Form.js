@@ -22,18 +22,15 @@ const Form = (props) => {
           type="button"
           onClick={() => {
             addBook({
-              id: uuidv4(),
+              item_id: uuidv4(),
               title,
               author,
               category: document.getElementById('categories-dropdown').value,
-              progress: 0,
-              chapters: 40,
-              currentChapter: 1,
             });
             setTitle('');
             setAuthor('');
             document.getElementById('book-title').value = title;
-            document.getElementById('book-author').author.value = author;
+            document.getElementById('book-author').value = author;
           }}
         >
           ADD BOOK
