@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addBook, removeBook } from '../redux/books/books';
+import { addBook, removeBook, getBooks } from '../redux/books/books';
 import Book from './Book';
 import './Books.css';
 import Form from './Form';
@@ -9,6 +9,10 @@ const Books = () => {
   const [books, setBooks] = useState([]);
   const booksInit = useSelector((state) => state.books);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBooks());
+  }, []);
 
   useEffect(() => {
     setBooks(booksInit);
@@ -28,14 +32,11 @@ const Books = () => {
         {
           books.map((book) => (
             <Book
-              key={book.id}
-              id={book.id}
+              key={book.item_id}
+              item_id={book.item_id}
               title={book.title}
               author={book.author}
               category={book.category}
-              progress={book.progress}
-              chapters={book.chapters}
-              currentChapter={book.currentChapter}
               removeBook={removeBookAction}
             />
           ))
