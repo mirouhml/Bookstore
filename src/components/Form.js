@@ -14,9 +14,9 @@ const Form = (props) => {
         <input type="text" placeholder="Book title" id="book-title" value={title} onChange={(event) => setTitle(event.target.value)} />
         <input type="text" placeholder="Author" id="book-author" value={author} onChange={(event) => setAuthor(event.target.value)} />
         <select id="categories-dropdown" name="categories">
-          <option value="action">Action</option>
-          <option value="science fiction">Science Fiction</option>
-          <option value="fantasy">Fantasy</option>
+          <option value="Action">Action</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Fantasy">Fantasy</option>
         </select>
         <button
           type="button"
