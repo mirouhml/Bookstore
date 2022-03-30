@@ -3,14 +3,22 @@ form {
   gap: 2rem;
 }
 
-input {
+.form-title {
+  font-weight: 700;
+  color: #888;
+}
+
+form input {
   flex-grow: 3;
 }
 
+form input,
 select {
-  flex-grow: 1;
+  border: solid 1px #e8e8e8;
+  padding: 0.8rem 1rem;
 }
 
+form select,
 button {
   flex-grow: 1;
 }
