@@ -6,6 +6,7 @@ form {
 .form-title {
   font-weight: 700;
   color: #888;
+  font-family: 'Montserrat', sans-serif;
 }
 
 form input {
