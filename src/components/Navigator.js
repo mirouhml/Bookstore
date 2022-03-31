@@ -24,7 +24,7 @@ const Navigator = () => (
     <div className="main">
       <div className="header">
         <h1>Bookstore</h1>
-        <ul>
+        <ul className="menu-items">
           <li className="active">
             <Link to="/" id="home" onClick={toggleActive}>BOOKS</Link>
           </li>
@@ -32,6 +32,7 @@ const Navigator = () => (
             <Link to="/categories" id="categories" onClick={toggleActive}>CATEGORIES</Link>
           </li>
         </ul>
+        <img src="https://user-images.githubusercontent.com/20567503/160926073-e2c62267-b2bc-440b-82ed-04caf2552b7e.png" alt="profile icon" />
       </div>
       <Routes>
         <Route path="/" element={<Books />} />
