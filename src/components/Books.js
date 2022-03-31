@@ -41,8 +41,11 @@ const Books = () => {
             />
           ))
         }
-        <li className="form-item"><Form addBook={addBookAction} removeBook={removeBookAction} /></li>
       </ul>
+      <div className="form-container">
+        <div className="horizontal-line" />
+        <div className="form-item"><Form addBook={addBookAction} removeBook={removeBookAction} /></div>
+      </div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+/* eslint-disable prefer-template */
 
 import React from 'react';
 import './Book.css';
@@ -10,8 +11,9 @@ const Book = (props) => {
   const {
     item_id, title, category, author, removeBook,
   } = props;
-  const progress = 10;
-  const currentChapter = 1;
+  const progress = Math.floor(Math.random() * 100);
+  const chapters = Math.floor(Math.random() * (80 - 40) + 40);
+  const currentChapter = Math.floor((chapters * progress) / 100);
   return (
     <li className="book">
       <div className="book-content-container">
@@ -20,34 +22,40 @@ const Book = (props) => {
           <h2 className="book-title">{title}</h2>
           <h3 className="book-author">{author}</h3>
         </div>
-        <div>
-          <button type="button">Comments</button>
-          <button type="button" onClick={() => { removeBook(item_id); }}>Remove</button>
-          <button type="button">Edit</button>
+        <div className="buttons-container">
+          <button type="button" className="buttons">Comments</button>
+          <div className="line" />
+          <button type="button" className="buttons" onClick={() => { removeBook(item_id); }}>Remove</button>
+          <div className="line" />
+          <button type="button" className="buttons">Edit</button>
         </div>
       </div>
       <div className="progress-content-container">
         <div className="progress-content">
           <div className="progress-bar">
-            <CircularProgressbar value={10} text={`${progress}%`} />
+            <CircularProgressbar value={progress} text={`${progress}%`} />
           </div>
           <div className="progress-text">
-            <p className="">
+            <p className="progress">
               {progress}
               %
             </p>
             <p className="completed">Completed</p>
           </div>
         </div>
-      </div>
-      <div className="vertical-line" />
-      <div className="current-chapter-container">
-        <p>CURRENT CHAPTER</p>
-        <p>
-          CHAPTER
-          {currentChapter}
-        </p>
-        <button type="button" className="progress-button">UPDATE PROGRESS</button>
+        <div className="vertical-line-container">
+          <div className="vertical-line" />
+        </div>
+        <div className="current-chapter-container">
+          <div>
+            <p className="current-chapter">CURRENT CHAPTER</p>
+            <p>
+              Chapter
+              {' ' + currentChapter}
+            </p>
+            <button type="button" className="progress-button">UPDATE PROGRESS</button>
+          </div>
+        </div>
       </div>
     </li>
   );

@@ -4,7 +4,7 @@
 
 >This is a "Bookstore" website, where you can add books to your list and check available categories.
 
-![localhost_3000_](https://user-images.githubusercontent.com/20567503/159832530-535ac5ca-3b1e-4e8a-be68-0776c5219d8a.png)
+![localhost_3000_](https://user-images.githubusercontent.com/20567503/161007676-c4acaed1-d848-4ae6-9321-b0e8369f3a88.png)
 
 
 ## Built With
